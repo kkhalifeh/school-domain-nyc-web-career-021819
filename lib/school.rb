@@ -21,7 +21,7 @@ class School
     end
 
     def sort
-      @roaster = Hash[@roster.map {|key,value| [key, value.sort]}]
+      @roaster = @roster.map {|key,value| [key, value.sort]}.to_h
     end
 
 end
